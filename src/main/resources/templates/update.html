@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Updated changes</title>
+<style>
+body{
+    background-color:#0d0d0d;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Form Container */
+.form-container{
+    background-color:#1a1a1a;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,255,136,0.2);
+    width:350px;
+    color:#e6ffe6;
+    border:1px solid #00ff88;
+}
+
+/* Heading */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#00ff88;
+}
+
+/* Product Card (inner section) */
+.product-card{
+    margin-bottom:15px;
+}
+
+/* Labels */
+label{
+    font-size:14px;
+}
+
+/* Inputs */
+input[type=text]{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #00ff88;
+    border-radius:5px;
+    background-color:#0d0d0d;
+    color:#e6ffe6;
+}
+
+/* Focus Effect */
+input[type=text]:focus{
+    outline:none;
+    box-shadow:0 0 5px #00ff88;
+}
+
+/* Submit Button */
+input[type=submit]{
+    width:100%;
+    padding:10px;
+    background-color:#00cc66;
+    color:black;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+/* Hover */
+input[type=submit]:hover{
+    background-color:#00ff88;
+    box-shadow:0 0 10px #00ff88;
+}
+</style>
+</head>
+<body>
+
+<form action="/abc" method="post">
+<div th:each="p:${products}" class="product-card">
+ 
+<input type="hidden" name="id" th:value="${p.id}">
+<label>Product Name</label>
+<input type="text" name="pname" th:value="${p.pname}">
+
+<label>Quantity</label>
+<input type="text" name="quantity" th:value="${p.quantity}">
+
+<label>Price</label>
+<input type="text" name="price" th:value="${p.price}">
+
+<label>Image</label>
+<input type="text" name="image" th:value="${p.image}">
+
+
+</div>
+<br><br>
+<input type="submit" value="Save Product">
+
+</form>
+
+</div>
+</body>
+</html>

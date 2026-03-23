@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Success</title>
+
+<style>
+body{
+    background-color:#0d0d0d;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Success Box */
+.success-container{
+    background-color:#1a1a1a;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,255,136,0.3);
+    text-align:center;
+    border:1px solid #00ff88;
+    color:#e6ffe6;
+}
+
+/* Heading */
+.success-container h2{
+    color:#00ff88;
+    margin-bottom:15px;
+}
+
+/* Button */
+.btn{
+    margin-top:20px;
+    padding:10px 15px;
+    background-color:#00cc66;
+    color:black;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background-color:#00ff88;
+    box-shadow:0 0 10px #00ff88;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="success-container">
+    <h2>✔ Selected Item was DeletedSuccessfully</h2>
+    <p>Your product has been deleted in the database.</p>
+
+    <a href="/products" class="btn">Go to Products</a>
+</div>
+
+</body>
+</html>
